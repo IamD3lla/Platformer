@@ -32,7 +32,7 @@ const scenes = {
 
     },
     controls: () => {
-
+        uiManager.displayControlsMenu()
     },
     1: () => {
 
@@ -59,5 +59,5 @@ for(const key in scenes) {
 
 }
 
-//Kaboom function that especifies a default scene
+//Kaboom function that especifies a default scene/ where the game starts
 go("menu")

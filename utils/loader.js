@@ -8,7 +8,13 @@ export const load = {
     },
     assets: () => {
         //load the sprites
-        loadSprite("forest-background", "./assets/Forest_Background_0.png"),
+        loadSprite("up", "./assets/W_Key_Dark.png")
+        loadSprite("down", "./assets/S_Key_Dark.png")
+        loadSprite("left", "./assets/A_Key_Dark.png")
+        loadSprite("right", "./assets/D_Key_Dark.png")
+        loadSprite("space", "./assets/Space_Key_Dark.png")
+
+        loadSprite("forest-background", "./assets/Forest_Background_0.png")
         loadSprite("logo", "./assets/Logo.png")
     },
     sounds: () => {

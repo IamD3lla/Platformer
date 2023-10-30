@@ -102,6 +102,64 @@ class UIManager {
 
     }
 
+    displayControlsMenu() {
+
+        add([
+            sprite("forest-background"),
+            scale(4)
+        ])
+        add([
+            text("Controls", {font: "Round", size: 50}),
+            area(),
+            anchor("center"),
+            pos(center().x, center().y - 200)
+        ])
+        
+        const controlPrompts = add([
+            pos(center().x - 200, center().y -20)
+        ])
+
+        //creates a child game Object of Control Prompts
+        //Add here is a method, not an object
+        //A single game object can have multiple "childs"
+        controlPrompts.add([
+            sprite("up"),
+            //is relative to the "parent", defines the pos relative to the const controlPrompts
+            pos(0, -80)
+        ])
+        controlPrompts.add([
+            sprite("down")
+            //Doensn't have the pos() function because the default position look good!
+        ])
+        controlPrompts.add([sprite("right"), pos(80, 0)])
+        controlPrompts.add([sprite("left"), pos(-80,0)])
+        controlPrompts.add([sprite("space"), pos(300,-50), scale(1.5)])
+
+        controlPrompts.add([
+            text("Jump", {font: "Round", size: 32}),
+            pos(+337, 120)
+        ])
+        controlPrompts.add([
+            text("Move", {font: "Round", size: 32}),
+            pos(10, 120)
+        ])
+
+        this.displayBlinkingUIMessage(
+            "Press [ Enter ] to Start Game",
+            vec2(center().x, center().y + 200)
+        )
+
+        onKeyPress("escape", () => {
+            play("confirm-ui", { speed: 1.5 })
+            go("menu")
+        }) 
+        onKeyPress("enter", () => {
+            play("confirm-ui", { speed: 1.5 })
+            //When it's a number there're no need to put the ""
+            go("1")
+        })
+
+    }
 }
 
 export const uiManager = new UIManager()
