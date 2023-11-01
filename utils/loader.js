@@ -25,6 +25,11 @@ export const load = {
             //used mostly for animations but can be used just to especify tiles
             anims: {
                 //tl = Top left Corner tile
+                //the number is the number on the order of where it is located on the tile. Ex.:
+                //      tl:0  1  2
+                //         3  4  5
+                //         6  7  8
+                //         9  10 11
                 tl: 0
             }
         })
