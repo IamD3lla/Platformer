@@ -1,3 +1,4 @@
+import { level1Layout } from "./content/level1/level1Layout.js"
 import kaboom from "./libs/kaboom.mjs"
 import { uiManager } from "./utils/UIManager.js"
 import { load } from "./utils/loader.js"

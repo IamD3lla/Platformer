@@ -16,6 +16,18 @@ export const load = {
 
         loadSprite("forest-background", "./assets/Forest_Background_0.png")
         loadSprite("logo", "./assets/Logo.png")
+        //importing a spritesheet - 3° parameter specifing which tile is wich
+        loadSprite("grass-tileset","./assets/Grass_Tileset.png", {
+            //How many tiles there is in the image horizontly
+            sliceX: 3,
+            //How many tiles there is verticly 
+            sliceY: 4,
+            //used mostly for animations but can be used just to especify tiles
+            anims: {
+                //tl = Top left Corner tile
+                tl: 0
+            }
+        })
     },
     sounds: () => {
         //load the sounds
