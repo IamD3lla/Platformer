@@ -7,7 +7,7 @@ import { load } from "./utils/loader.js"
 //set the properties of the window
 kaboom({
     width: 1280,
-    height: 720,
+    height: 640,
     letterbox: true
 })
 
