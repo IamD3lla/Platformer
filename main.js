@@ -1,4 +1,4 @@
-import { level1Layout } from "./content/level1/level1Layout.js"
+//import { level1Layout } from "./content/level1/level1Layout.js"
 import kaboom from "./libs/kaboom.mjs"
 import { uiManager } from "./utils/UIManager.js"
 import { load } from "./utils/loader.js"
@@ -7,7 +7,7 @@ import { load } from "./utils/loader.js"
 //set the properties of the window
 kaboom({
     width: 1280,
-    height: 640,
+    height: 720,
     letterbox: true
 })
 
