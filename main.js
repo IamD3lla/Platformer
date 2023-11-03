@@ -1,4 +1,5 @@
-//import { level1Layout } from "./content/level1/level1Layout.js"
+import {Level} from "./utils/Level.js"
+import { level1Layout, level1Mappings } from "./content/level1/level1Layout.js"
 import kaboom from "./libs/kaboom.mjs"
 import { uiManager } from "./utils/UIManager.js"
 import { load } from "./utils/loader.js"
@@ -7,7 +8,7 @@ import { load } from "./utils/loader.js"
 //set the properties of the window
 kaboom({
     width: 1280,
-    height: 640,
+    height: 720,
     letterbox: true
 })
 
@@ -19,6 +20,7 @@ load.fonts()
 load.sounds()
 
 //creates an object for the scenes
+//In the scenes we draw the different objects that we want in each scene
 const scenes = {
 
     menu: () => {
@@ -36,7 +38,14 @@ const scenes = {
         uiManager.displayControlsMenu()
     },
     1: () => {
-
+        //We can call a new Object Level() because we exported the class
+        const level1 = new Level()
+        //Draw the background
+        level1.drawBackground("forest-background")
+        //Draw the maps
+        level1.drawMapLayout(level1Layout, level1Mappings)
+        //Draw the water
+        level1.drawWaves("water", "wave")
     },
     2: () => {
 

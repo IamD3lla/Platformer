@@ -1,4 +1,4 @@
-import { generateMappings } from "../generalMappings"
+import { generateMappings } from "../generalMappings.js"
 
 export const level1Mappings = generateMappings("grass")
 
